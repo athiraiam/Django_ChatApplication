@@ -48,13 +48,23 @@ Signup module steps:
 - add signup link to html template -> registration/login.html
 - create views for signup, add signup url and view name in reg/urls.py
     from reg.views import *
-    urlpatterns = [ path('reg/', reg),]
+    urlpatterns = [ path('signup/', signup),]
 - add forms.py under reg application
 - utilize existing UserCreationForm form and User model to signup with additional fields in reg/forms.py
     from django.contrib.auth.forms import UserCreationForm
     from django.contrib.auth.models import User
 - create signup view definition in reg/views.py
     from django.contrib.auth import authenticate,login
+
+Search for the user using username
+    - create another application 'home' : python manage.py startapp home
+    - add home in INSTALLED APP section in settings.py
+    - project.urls.py
+        from django.urls import path, include
+        urlpatterns = [ path('home/', 'home.urls') ]
+    - create views for search and view name in home/urls.py
+        from home.views import *
+        urlpatterns = [ path('search_user/', search_user),]
 
 
 

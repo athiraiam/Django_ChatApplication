@@ -12,6 +12,7 @@ def reg(request):
     profile_first = profile_info.first_name
     profile_last = profile_info.last_name
     return render(request, "registration/reg.html", {'profile_first': profile_first, 'profile_last':profile_last})
+
 def signup(request):
     form = SignupForm()
     if request.method == "POST":
