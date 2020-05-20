@@ -22,8 +22,8 @@ Login Module steps:
 - To access login module we have url : /reg/login/
 - Create html template for login under templates folder : registration/login.html
 - Let djnago database know about Login form, model name 'User'
-    -python manage.py makemigrations
-    -python manage.py migrate
+    python manage.py makemigrations
+    python manage.py migrate
 - Create admin super user to login
     python manage.py createsuperuser
     test Test@123
